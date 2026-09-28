@@ -4,14 +4,21 @@ import math
 open_canvas(800, 600)
 
 character = load_image('character.png')
-
-clear_canvas()
-character.draw(100, 100)
-update_canvas()
-delay(10)
+angle = 0
 
 
-close_canvas()
+while True:
+    x = 200 + 100 * math.sin(angle)
+    y = 200 + 100 * math.cos(angle)
+    clear_canvas()
+    character.draw(x, y)
+    update_canvas()
+    delay(0.01)
+    angle += 0.05
+
+
+
+
 
 
 
